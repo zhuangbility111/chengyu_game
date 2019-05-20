@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.chengyu_game.View.MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="true"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/mTbMainActivity">
+
+        <TextView
+            android:id="@+id/mTvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp" />
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mSrlMainActivity"
+        android:layout_below="@id/mTbMainActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mLLShowMoneyAndMaxLevel"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="总金币："
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:id="@+id/mTvShowMoney"
+                    android:layout_margin="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="历史最高关卡："
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="18sp"
+                        android:textColor="#000000"
+                        android:id="@+id/mTvShowMaxLevel"
+                        android:layout_margin="10dp"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/mLLShowMoneyAndMaxLevel"
+                android:layout_marginTop="30dp"
+                android:text="下一关"
+                android:id="@+id/mBtEnterNextLevel"
+                android:visibility="gone"/>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/mLLShowMoneyAndMaxLevel"
+                android:layout_marginTop="15dp"
+                android:id="@+id/mIvChengyuImg"
+                android:background="@drawable/img_bg_border"
+                />
+
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:layout_below="@id/mIvChengyuImg"-->
+                <!--android:id="@+id/relativeLayout">-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/mEtText1"-->
+                    <!--android:layout_width="200dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:gravity="center"-->
+                    <!--android:inputType="text" />-->
+
+                <!--<EditText-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/mEtText2"-->
+                <!--android:layout_weight="1"-->
+                <!--android:inputType="text"-->
+                <!--android:maxLength="1"/>-->
+
+                <!--<EditText-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/mEtText3"-->
+                <!--android:layout_weight="1"-->
+                <!--android:inputType="text"-->
+                <!--android:maxLength="1"/>-->
+
+                <!--<EditText-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/mEtText4"-->
+                <!--android:layout_weight="1"-->
+                <!--android:inputType="text"-->
+                <!--android:maxLength="1"/>-->
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/mLLShowSelectedChengyu"
+                    android:layout_below="@id/mIvChengyuImg"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:textSize="32sp"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:background="@drawable/chengyu_text_bg_border"
+                        android:id="@+id/mTvSelectedChengyu1"/>
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:textSize="32sp"
+                        android:layout_marginLeft="30dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/chengyu_text_bg_border"
+                        android:id="@+id/mTvSelectedChengyu2"/>
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:textSize="32sp"
+                        android:layout_marginLeft="30dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/chengyu_text_bg_border"
+                        android:id="@+id/mTvSelectedChengyu3"/>
+
+                    <TextView
+                        android:id="@+id/mTvSelectedChengyu4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/chengyu_text_bg_border"
+                        android:textSize="32sp" />
+                    
+
+                </LinearLayout>
+            
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mGvShowChengyuZi"
+                android:layout_below="@id/mLLShowSelectedChengyu"
+                android:layout_marginTop="20dp"
+
+                android:numColumns="6"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+            </GridView>
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/relativeLayout">-->
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="提交答案"-->
+                    <!--android:id="@+id/mBtSubmitAnswer"-->
+                    <!--android:layout_centerInParent="true"/>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true">-->
+
+                    <!--<Button-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="查看成语详情"-->
+                        <!--android:id="@+id/mBtShowDetails"-->
+                        <!--android:visibility="gone"/>-->
+
+
+
+                <!--</LinearLayout>-->
+
+            <!--</RelativeLayout>-->
+
+            
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+</RelativeLayout>

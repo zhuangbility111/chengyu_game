@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.administrator.chengyu_game.View.ShowDetailsActivity"
+    tools:showIn="@layout/activity_scrolling">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/text_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:id="@+id/mTvChengyu"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mTvPingyin"
+            android:layout_below="@id/mTvChengyu"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/text_margin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mTvJieshi"
+            android:layout_below="@id/mTvPingyin"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/text_margin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mTvChuchu"
+            android:layout_below="@id/mTvJieshi"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/text_margin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mTvJulizaoju"
+            android:layout_below="@id/mTvChuchu"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/text_margin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mTvPingyindaima"
+            android:layout_below="@id/mTvJulizaoju"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/text_margin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mTvJinyici"
+            android:layout_below="@id/mTvPingyindaima"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/text_margin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mTvFanyici"
+            android:layout_below="@id/mTvJinyici"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/text_margin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mTvXiehouyu"
+            android:layout_below="@id/mTvFanyici"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/text_margin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mTvDengmi"
+            android:layout_below="@id/mTvXiehouyu"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/text_margin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mTvYongfa"
+            android:layout_below="@id/mTvDengmi"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/text_margin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mTvYingwen"
+            android:layout_below="@id/mTvYongfa"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/text_margin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mTvGushi"
+            android:layout_below="@id/mTvYingwen"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginBottom="@dimen/text_margin"/>
+
+    </RelativeLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>
